@@ -240,9 +240,10 @@ void March()
 		Beep(349, 350);
 		Beep(523, 150);
 		Beep(440, 1000);
-		if (status.ACLineStatus ==0)
+		GetSystemPowerStatus(&status);
+		if (status.ACLineStatus ==1)
 		{
-
+			return;
 		}
 	}
 	
